@@ -1,4 +1,5 @@
 /* eslint-disable */
+
 const { resolve } = require('path');
 
 const zlib = require('zlib');
