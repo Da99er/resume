@@ -160,7 +160,7 @@ function createWebpackConfig() {
     });
 
     config.module.rules.push({
-        test: /\.(jpe?g|png|gif|svg|ttf|eot|woff|woff2|html)$/i,
+        test: /\.(jpe?g|png|gif|svg|ttf|eot|woff|woff2|html|ico)$/i,
         use: {
             loader: 'file-loader',
             options: {
