@@ -1,20 +1,33 @@
 {
     "compilerOptions":
     {
+        "baseUrl": ".",
         "outDir": "./bundle/",
         "rootDir": "./src/",
+        "lib": ["esnext", "dom"],
         "strict": true,
         "sourceMap": true,
-        "lib": ["es6", "dom"],
-        "module": "commonjs",
-        "moduleResolution": "node",
-        "target": "es6",
         "allowJs": true,
+        "target": "es6",
+        "module": "esnext",
+        "moduleResolution": "node",
+        "allowSyntheticDefaultImports": true,
         "removeComments": true,
+        "strictNullChecks": true,
         "jsx": "react",
         "typeRoots": ["node_modules/@types", "src/typings"],
-        "esModuleInterop": true
+        "esModuleInterop": true,
+        "forceConsistentCasingInFileNames": true,
+        "noImplicitReturns": true,
+        "noImplicitThis": true,
+        "noImplicitAny": true,
+        "importHelpers": true,
+        "suppressImplicitAnyIndexErrors": true,
+        "noUnusedLocals": true
     },
     "include": ["src/**/*"],
-    "exclude": ["node_modules"]
+    "exclude": ["node_modules"],
+    "paths": {
+        "src/*": ["src/*"],
+    }
 }

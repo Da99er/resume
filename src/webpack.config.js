@@ -126,7 +126,7 @@ function createWebpackConfig() {
     config.resolve = {
         extensions: ['.ts', '.tsx', '.js', '.json', '.css', '.scss'],
         alias: {
-            '@root': ROOT_DIR,
+            src: ROOT_DIR,
         },
     };
 
