@@ -9,12 +9,12 @@ export interface ITable {
     rows: ITableRow[];
 }
 
-function mapRenderData({ field, content, link }: ITableRow) {
-    const key = field + content;
+function mapRenderData({ field, content, link }: ITableRow, index: number): JSX.Element {
+    const key = field + content + index;
     return <TableRow key={key} field={field} content={content} link={link} />;
 }
 
-function Table({ title, rows }: ITable) {
+function Table({ title, rows }: ITable): JSX.Element {
     return (
         <table className={S.root} cellSpacing={2}>
             <thead>

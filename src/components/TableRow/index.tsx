@@ -8,11 +8,11 @@ export interface ITableRow {
     link?: string;
 }
 
-function TableRow({ field, content, link }: ITableRow) {
+function TableRow({ field, content, link }: ITableRow): JSX.Element {
     if (field.length === 0) {
         return (
             <tr className={S.root}>
-                <td colSpan={2}>&nbsp;</td>
+                <td colSpan={2}> </td>
             </tr>
         );
     }
@@ -22,10 +22,9 @@ function TableRow({ field, content, link }: ITableRow) {
             <td className={S.colLeft}>{field}</td>
             <td className={S.colRight}>
                 {content}
-                {link ? ' ' : null}
                 {link ? (
                     <a href={link} className={S.link} target="_blank" rel="noreferrer">
-                        &#128279;
+                        🔗
                     </a>
                 ) : null}
             </td>

@@ -10,7 +10,7 @@ import employments from 'src/siteData/employments';
 
 import S from './style.scss';
 
-function App() {
+function App(): JSX.Element {
     return (
         <div className={S.root}>
             <Table title={`Frontend Developer (React.js) Hulevich Vadim`} rows={personalInfo} />
@@ -18,7 +18,6 @@ function App() {
             <Table title={`Education`} rows={education} />
             <Table title={`Courses and Certificates`} rows={courses} />
             <Table title={`Employment History`} rows={employments} />
-
             <p className={S.footer}>Information for employers. Frontend Developer (React.js) Hulevich Vadim.</p>
         </div>
     );
